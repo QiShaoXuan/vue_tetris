@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 
-const saveData = localStorage.getItem('tetrisData')?JSON.parse(localStorage.getItem('tetrisData')):{
-  maxScore:0
+const saveData = localStorage.getItem('tetrisData') ? JSON.parse(localStorage.getItem('tetrisData')) : {
+  maxScore: 0
 }
 
 export default new Vuex.Store({
@@ -24,10 +24,10 @@ export default new Vuex.Store({
     level: 1,
     isStop: true,
     hasStart: false,
-    maskShow:true,//遮罩是否显示
+    maskShow: true,//遮罩是否显示
     fullLine: [],//刷新动画动画
     score: 0,
-    maxScore:saveData.maxScore
+    maxScore: saveData.maxScore
   },
   mutations: {
     createTetirs(state){
@@ -195,7 +195,7 @@ export default new Vuex.Store({
         })
       }
 
-      if (!checkBoundary(new_position)) {
+      if (!checkBoundary(new_position) && !checkPile(state, newPosition)) {
         state.moving.render = new_position
       }
     },
@@ -362,10 +362,10 @@ function setScore(state, dissapear) {
   let lineNum = dissapear.filter(v => v[0] === 0).length
   let newScore = state.score + lineNum * 100 + (lineNum - 1) * 50
   state.score = newScore
-  if(state.score > state.maxScore){
+  if (state.score > state.maxScore) {
     state.maxScore = newScore
     saveData.maxScore = newScore
-    localStorage.setItem('tetrisData',JSON.stringify(saveData))
+    localStorage.setItem('tetrisData', JSON.stringify(saveData))
   }
 }
 //设置初始行
