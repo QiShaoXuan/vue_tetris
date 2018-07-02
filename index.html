@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="使用Vue,vuex制作的俄罗斯方块" />
+    <meta name="keywords" content="俄罗斯方块,Tetris,Vue,Vuex,JavaScript">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>俄罗斯方块</title>
+    <script>
+      ;(function () {
+        var w = parseInt(window.screen.width), s = w / 450, u = navigator.userAgent.toLowerCase(),
+          m = '<meta name="viewport" content="width=450,';
+        if (/android (\d+\.\d+)/.test(u)) {
+          if (parseFloat(RegExp.$1) > 2.3) m += 'minimum-scale=' + s + ',maximum-scale=' + s + ',';
+        } else {
+          m += 'user-scalable=no,';
+        }
+        m += 'target-densitydpi=device-dpi">';
+        document.write(m);
+      }());
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
