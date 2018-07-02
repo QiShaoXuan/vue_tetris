@@ -1,7 +1,7 @@
 <style scoped lang="scss">
   .panel {
-    width: 380px;
-    height: 468px;
+    width: 360px;
+    height: 428px;
     margin: 0 auto;
     background: #9ead86;
     padding: 8px;

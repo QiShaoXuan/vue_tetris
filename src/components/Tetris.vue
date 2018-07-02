@@ -1,7 +1,7 @@
 <style scoped lang="scss">
   .square-container {
-    width: 228px;
-    height: 448px;
+    width: 208px;
+    height: 408px;
     background: #9ead86;
     display: flex;
     justify-content: flex-start;
@@ -13,16 +13,16 @@
     padding: 3px 1px 1px 3px;
     .square {
       display: block;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       padding: 2px;
       border: 2px solid #879372;
       margin: 0 2px 2px 0;
       &::after {
         content: "";
         display: block;
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         background: #879372;
         overflow: hidden;
       }
@@ -101,7 +101,7 @@
 
 <template>
   <div class="outer">
-    <div class="mask" v-if="maskShow">
+    <div class="mask" v-if="false">
       <div class="rex" :class="rexName"></div>
       <p class="title">俄罗斯方块</p>
       <p ><i class="triangle"></i>\<i class="triangle down"></i> | 调整等级</p>
