@@ -33,7 +33,6 @@ export default new Vuex.Store({
     createTetirs(state){
       let type = Math.floor(Math.random() * 7)
       let cx = Math.round(state.width / 2)//中心点 5
-      type = 3
       switch (type) {
         case 0://正方形
           state.moving = {
