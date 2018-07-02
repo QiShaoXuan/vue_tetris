@@ -142,7 +142,7 @@ export default new Vuex.Store({
       state.moving.render.forEach((v) => {
         newPosition.push([v[0] - 1, v[1]])
       })
-      if (!checkBoundary(newPosition)) {
+      if (!checkBoundary(newPosition) && !checkPile(state, newPosition)) {
         state.moving.render = newPosition
         state.moving.center = [state.moving.center[0] - 1, state.moving.center[1]]
       }
@@ -155,7 +155,7 @@ export default new Vuex.Store({
       state.moving.render.forEach((v) => {
         newPosition.push([v[0] + 1, v[1]])
       })
-      if (!checkBoundary(newPosition)) {
+      if (!checkBoundary(newPosition) && !checkPile(state, newPosition)) {
         state.moving.render = newPosition
         state.moving.center = [state.moving.center[0] + 1, state.moving.center[1]]
       }
