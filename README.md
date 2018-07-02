@@ -1,21 +1,5 @@
-# tetris
+# 俄罗斯方块
 
-> a game
+基于Vue和Vuex
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+没什么难点，看有的大神一顿吹，就想着写写，并不难，但因为上来没设计就直接写导致后来有些细节又要改前面的代码，emm….没什么可吹的，基本操作
