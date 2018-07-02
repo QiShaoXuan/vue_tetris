@@ -234,10 +234,8 @@
       },
       up(){
         if (this.checkHasStart()) {
-          console.log('set')
           this.$store.commit('setLevel', 'add')
         } else {
-          console.log('rotate')
           this.$store.commit('rotate')
         }
       },

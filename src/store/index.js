@@ -195,7 +195,7 @@ export default new Vuex.Store({
         })
       }
 
-      if (!checkBoundary(new_position) && !checkPile(state, newPosition)) {
+      if (!checkBoundary(new_position) && !checkPile(state, new_position)) {
         state.moving.render = new_position
       }
     },
@@ -349,10 +349,17 @@ function deletePile(state, dissapear) {
   })
   let min = dissapear.sort((a, b) => b[1] - a[1])[0]
   let lineNum = dissapear.filter(v => v[0] === 0).length
+  let dissapearLine = dissapear.filter(v => v[0] === 0)
 
+  // newPosition.forEach((v) => {
+  //   if (v[1] <= min[1]) {
+  //     v[1] += lineNum
+  //   }
+  // })
   newPosition.forEach((v) => {
-    if (v[1] <= min[1]) {
-      v[1] += lineNum
+    let minLine = dissapearLine.filter(arr => v[1]<= arr[1] )
+    if(minLine.length){
+      v[1] += minLine.length
     }
   })
   state.pile = newPosition

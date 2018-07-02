@@ -101,7 +101,7 @@
 
 <template>
   <div class="outer">
-    <div class="mask" v-if="false">
+    <div class="mask" v-if="maskShow">
       <div class="rex" :class="rexName"></div>
       <p class="title">俄罗斯方块</p>
       <p ><i class="triangle"></i>\<i class="triangle down"></i> | 调整等级</p>
