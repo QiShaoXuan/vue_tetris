@@ -1,12 +1,13 @@
-# 俄罗斯方块
+# 俄罗斯方块 teris
 
-基于Vue和Vuex
+make by vue and vuex
 
-没什么难点，看有的大神一顿吹，就想着写写，并不难，但因为上来没设计就直接写导致后来有些细节又要改前面的代码，emm….没什么可吹的，一点基本操作而已。
+## view online
 
-## 还有一点待完成
+https://qishaoxuan.github.io/vue_tetris/
+
+## TODOs
 
 1. 音效
 2. 按钮的点击样式
 3. 本地存储需要保存上次退出时的状态
-4. …...
