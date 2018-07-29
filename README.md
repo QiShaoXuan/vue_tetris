@@ -1,4 +1,4 @@
-# 俄罗斯方块 teris
+# 俄罗斯方块 tetris
 
 make by vue and vuex
 
