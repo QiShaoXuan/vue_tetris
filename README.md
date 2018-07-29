@@ -6,7 +6,7 @@ make by vue and vuex
 
 https://qishaoxuan.github.io/vue_tetris/
 
-## TODOs
+## TODO
 
 1. 音效
 2. 按钮的点击样式
