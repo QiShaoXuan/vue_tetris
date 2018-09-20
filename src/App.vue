@@ -46,6 +46,7 @@
   }
 
   .box {
+    // max-height:800px;
     height: 100%;
     width: 450px;
     margin: 0 auto;
@@ -65,4 +66,10 @@
     height: 100%;
     background: #303841;
   }
+
+  @media (min-width: 800px) {
+      .box {
+        height:800px;
+      }
+   }
 </style>
